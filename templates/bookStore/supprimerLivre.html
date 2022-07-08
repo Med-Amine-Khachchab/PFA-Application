@@ -1,0 +1,30 @@
+{% extends 'bookstore/main.html'%}
+
+
+{% block content %}
+
+<div class="container mt-5 " >
+    <div class="d-flex justify-content-center align-itmes-center">
+        
+        <div class="card shadow-sm " style="width: 31rem;">
+            <h1 class="text-center card-title bg-primary text-white py-3"  style="font-family: Didot, serif;">Supprimer : {{livre.titre}}</h1>
+            <div class="card-body text-center">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    
+                    <a href="{% url 'books' %}">
+                        <button type="button" class="btn btn-success">Annuler</button>
+                    </a>
+                    <button type="submit" class="btn btn-danger"> Valider suppression</button>
+                </form>
+                
+            </div>
+          </div>
+    </div>
+    
+   
+</div>
+
+
+
+{% endblock %}1>

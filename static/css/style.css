@@ -1,0 +1,15 @@
+.bg-primary{
+            background-color: rgb(235, 220, 20)!important;
+        }
+body{
+    background-color: rgb(246, 250, 250);
+   
+  
+}   
+footer {
+    margin-top: 50px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+ }

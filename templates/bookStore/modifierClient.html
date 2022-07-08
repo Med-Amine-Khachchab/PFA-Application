@@ -1,0 +1,34 @@
+{% extends 'bookstore/main.html' %}
+{% load crispy_forms_tags%}
+{% block content %}
+
+    <div class="container mt-5 " >
+        <div class="d-flex justify-content-center align-itmes-center">
+            
+            <div class="card shadow-sm " style="width: 51rem;">
+                <h1 class="text-center card-title bg-primary text-white py-3"  style="font-family: Didot, serif;">Modifier le client</h1>
+                <div class="card-body ">
+                    <form action="" method="post" class="mb-5">
+                        {% csrf_token %}
+                        
+                            {{ form|crispy }}
+                        
+                        <div class=" float-sm-end mt-2">
+                           
+                                <button type="submit" class="btn btn-primary btn-sm"><i class="fad fa-edit"></i> Modifier</button>
+                                <a href="{% url 'index' %}">
+                                    <button type="button" class="btn bg-secondary text-white btn-sm">Annuler</button>
+                                </a>
+                           
+                           
+                        </div>
+                       
+                    </form>
+                </div>
+              </div>
+        </div>
+        
+       
+    </div>
+
+{% endblock %}
